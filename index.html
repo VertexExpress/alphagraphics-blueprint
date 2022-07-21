@@ -12,16 +12,29 @@
             <input type = "text" id ="projName" name = "projName"><br>
             <label for="projNum">P.O.#</label><br>
             <input type = "text" id ="projNum" name = "projNum"><br>
-            
+
             <label for="orderName">Ordered By</label><br>
             <input type = "text" id ="orderName" name = "orderName"><br>
-            <label for="calender">Date Needed</label><br>
-            <input type = "date" id ="calender" name = "calender"><br>
+            <label for="hour">Time Needed</label><br>
+            <input type = "datetime-local" id ="calender" name = "calender"><br>
+
+            <div class="dropdown">
+                <button onclick="sizeSelect()" class="dropbtn">Size</button>
+                <div id="sizeSelect" class="dropdown-content">
+                    <ul>24x36 (Most Common)</ul>
+                    <ul>12X18</ul>
+                    <ul>15x22</ul>
+                    <ul>18x24</ul>
+                </div>
+            </div>
 
             <input type="radio" id="blackWhite" name="inkSelect" value="Greyscale">
             <label for="blackPrint">Black & White</label><br>
             <input type="radio" id="lineColor" name="inkSelect" value="Color">
             <label for="colorPrint">Color</label><br>
+
+            <input type="submit" id="submitForm" name="submitForm">
+            
 
         </form>
     </body>
