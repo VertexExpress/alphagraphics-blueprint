@@ -6,36 +6,31 @@
     </head>
     <body>
         <form>
-            <label for="compName">Company Name</label><br>
-            <input type = "text" id ="compName" name = "compName"><br>
-            <label for="projName">Project Name</label><br>
-            <input type = "text" id ="projName" name = "projName"><br>
-            <label for="projNum">P.O.#</label><br>
-            <input type = "text" id ="projNum" name = "projNum"><br>
-
-            <label for="orderName">Ordered By</label><br>
-            <input type = "text" id ="orderName" name = "orderName"><br>
-            <label for="hour">Time Needed</label><br>
-            <input type = "datetime-local" id ="calender" name = "calender"><br>
-
-            <div class="dropdown">
-                <button onclick="sizeSelect()" class="dropbtn">Size</button>
-                <div id="sizeSelect" class="dropdown-content">
-                    <ul>24x36 (Most Common)</ul>
-                    <ul>12X18</ul>
-                    <ul>15x22</ul>
-                    <ul>18x24</ul>
-                </div>
-            </div>
-
-            <input type="radio" id="blackWhite" name="inkSelect" value="Greyscale">
-            <label for="blackPrint">Black & White</label><br>
-            <input type="radio" id="lineColor" name="inkSelect" value="Color">
-            <label for="colorPrint">Color</label><br>
-
-            <input type="submit" id="submitForm" name="submitForm">
-            
-
+            <p>Company Name</p>
+            <input type = "text">
+            <p>Project Name</p>
+            <input type = "text">
+            <p>P.O.#</p>
+            <input type = "text">
+            <p>Ordered By</p>
+            <input type = "text"><br>
+            <p>Time Needed</p>
+            <input type = "time"><br><br>
+            <p>Binding</p>
+            <input type="radio" name="bindType" id="bindS">
+            <label for="bindS">Binding Strip</label>
+            <input type="radio" name="bindType" id="staple">
+            <label for="staple">Stapled (No Strip)</label>
         </form>
+
+        <p>Ink Type</p>
+        <form>
+            <input type="radio" id="black" name="inkType">
+            <label for="black">Black & White</label>
+            <input type="radio" id="color" name="inkType">
+            <label for="color">Color</label><br><br>
+        </form>
+
+        <input type="button" value="Print">
     </body>
 </html>
