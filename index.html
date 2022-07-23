@@ -3,6 +3,7 @@
     <head>
         <title>Ace Order Form</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="main_style_sheet.css">
     </head>
     <body>
         <form>
@@ -21,16 +22,35 @@
             <label for="bindS">Binding Strip</label>
             <input type="radio" name="bindType" id="staple">
             <label for="staple">Stapled (No Strip)</label>
-        </form>
+            <input type="radio" name="bindType" id="loose">
+            <label for="loose">Loose</label>
+        </form><br>
+
+        <table>
+            <tr>
+                <th>PL</th>
+                <th>BL</th>
+                <th>LD</th>
+                <th>HD</th>
+                <th>LCP</th>
+                <th>LDCP</th>
+                <th>HDCP</th>
+                <th>FCLP</th>
+            </tr>
+            <td>E</td>
+            <td>C</td>
+            <td>D</td>
+            <td>B</td>
+        </table>
 
         <p>Ink Type</p>
         <form>
-            <input type="radio" id="black" name="inkType">
+            <input type="checkbox" id="black" name="inkType">
             <label for="black">Black & White</label>
-            <input type="radio" id="color" name="inkType">
+            <input type="checkbox" id="color" name="inkType">
             <label for="color">Color</label><br><br>
         </form>
 
-        <input type="button" value="Print">
+        <input type="button" value="Print" onclick="window.print();return false;">
     </body>
 </html>
