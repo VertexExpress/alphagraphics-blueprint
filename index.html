@@ -7,16 +7,16 @@
     </head>
     <body>
         <form>
-            <p>Company Name</p>
-            <input type = "text">
-            <p>Project Name</p>
-            <input type = "text">
-            <p>P.O.#</p>
-            <input type = "text">
-            <p>Ordered By</p>
-            <input type = "text"><br>
-            <p>Time Needed</p>
-            <input type = "time"><br><br>
+            <div><p>Company Name</p>
+            <input type = "text"></div>
+            <div><p>Project Name</p>
+            <input type = "text"></div>
+            <div><p>P.O.#</p>
+            <input type = "text"></div>
+            <div><p>Ordered By</p>
+            <input type = "text"></div>
+            <div><p>Time Needed</p>
+            <input type = "time"></div>
             <p>Binding</p>
             <input type="radio" name="bindType" id="bindS">
             <label for="bindS">Binding Strip</label>
@@ -24,22 +24,32 @@
             <label for="staple">Stapled (No Strip)</label>
             <input type="radio" name="bindType" id="loose">
             <label for="loose">Loose</label>
-        </form><br>
+        </form>
+
+        <form>
+            <p>Ink Type</p>
+            <input type="checkbox" id="black" name="inkType">
+            <label for="black">Black & White</label>
+            <input type="checkbox" id="color" name="inkType">
+            <label for="color">Color</label>
+        </form>
 
         <!--Chart for typing out how many pages are printed for invoicing-->
         <table name="printChart">
             <tr>
+                <th></th>
                 <th>PL</th>
                 <th>BL</th>
                 <th>LD</th>
                 <th>HD</th>
-                <th>LCP</th>
-                <th>LDCP</th>
-                <th>HDCP</th>
-                <th>FCLP</th>
+                <th>LC</th>
+                <th>LDC</th>
+                <th>HDC</th>
+                <th>FCL</th>
             </tr>
                 <tr>
                     <td>E</td>
+                    <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
@@ -57,9 +67,11 @@
                     <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
                 </tr>
                 <tr>
                     <td>D</td>
+                    <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
@@ -77,17 +89,10 @@
                     <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
                     <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
                 </tr>
         </table>
 
-        <p>Ink Type</p>
-        <form>
-            <input type="checkbox" id="black" name="inkType">
-            <label for="black">Black & White</label>
-            <input type="checkbox" id="color" name="inkType">
-            <label for="color">Color</label><br><br>
-        </form>
-
-        <input type="button" value="Print" onclick="window.print();return false;">
+        <br><input type="button" value="Print" onclick="window.print();return false;">
     </body>
 </html>
